@@ -6,10 +6,9 @@ Library                   DateTime
 
 
 *** Variables ***
-${username}               j.mountan@copaboot803.com
-${login_url}              https://login.salesforce.com/            # Salesforce instance. NOTE: Should be overwritten in CRT variables
-${my_domain_url}          https://copado-6a.lightning.force.com/    # Salesforce instance. NOTE: Should be overwritten in CRT variables
-${home_url}               ${my_domain_url}/lightning/page/home
+${username}               jMo@copado.com
+${login_url}              https://login.salesforce.com           # Salesforce instance. NOTE: Should be overwritten in CRT variables
+${home_url}               ${login_url}/lightning/page/home
 
 
 *** Keywords ***

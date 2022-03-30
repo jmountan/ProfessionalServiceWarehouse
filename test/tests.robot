@@ -7,4 +7,4 @@ Test Template                 Entering A Department
 *** Test Cases ***
 
 Entering a Lead
-    Appstate    Home
+    Appstate                    Home

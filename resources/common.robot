@@ -28,7 +28,7 @@ Login
     TypeText              Password                    ${password}
     ClickText             Log In
     ${isMFA}=             IsText                      Verify Your Identity            #Is the user prompted to enter their OTP?
-    IF ${isMFA}
+    IF                    ${isMFA}
         ${mfaCode}=       GetOTP                      ${username}            ${MY_SECRET}        ${password}
         TypeSecret        Code                        ${mfaCode}
         ClickText         Verify

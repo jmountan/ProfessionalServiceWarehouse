@@ -19,21 +19,21 @@ Entering A Lead
     Picklist                  Salutation                  Ms.
     TypeText                  First Name                  Tina
     TypeText                  Last Name                   Smith
-    Picklist                  Lead Status                 New
+    Picklist                  Lead Status                 Open - Not Contacted
     TypeText                  Phone                       +12234567858449             First Name
     TypeText                  Company                     Growmore                    Last Name
     TypeText                  Title                       Manager                     Address Information
     TypeText                  Email                       tina.smith@gmail.com        Rating
     TypeText                  Website                     https://www.growmore.com/
 
-    Picklist                  Lead Source                 Partner
+    Picklist                  Lead Source                 Web
     ClickText                 Save                        partial_match=False
     UseModal                  Off
     Sleep                     1
     
     ClickText                 Details
     VerifyField               Name                        Ms. Tina Smith
-    VerifyField               Lead Status                 New
+    VerifyField               Lead Status                 Open - Not Contacted
     VerifyField               Phone                       +12234567858449
     VerifyField               Company                     Growmore
     VerifyField               Website                     https://www.growmore.com/
@@ -72,7 +72,7 @@ Create StartupABC Account
     ClickText                    Phone
     TypeText                     Phone                   12234567858449
     ClickText                    --None--                anchor=Type
-    ClickText                    Investor
+    ClickText                    Prospect
     ClickText                    --None--                anchor=Industry
     ClickText                    Banking
     ClickText                    Employees
@@ -82,7 +82,7 @@ Create StartupABC Account
 
     VerifyText                   StartupABC
     VerifyText                   Banking                 anchor=Industry
-    VerifyText                   Investor                anchor=Type
+    VerifyText                   Prospect                anchor=Type
 
 Create TinaSmith Contact
     [tags]                    Contact

@@ -3,7 +3,7 @@ Resource                      ../resources/common.robot
 Library                       DataDriver    reader_class=TestDataApi       name=New_Accounts.csv
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
-Test Template                 Entering Accounts
+#Test Template                 Entering Accounts
 
 
 *** Test Cases ***

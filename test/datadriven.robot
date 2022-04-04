@@ -1,6 +1,7 @@
 *** Settings ***
 Resource                      ../resources/common.robot
-Library                       DataDriver    reader_class=TestDataApi       name="NewAccounts.csv"
+Library                       QWeb
+Library                       DataDriver    reader_class=TestDataApi    name=NewAccounts.csv
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Test Template                 Entering Accounts

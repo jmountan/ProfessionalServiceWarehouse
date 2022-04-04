@@ -11,7 +11,7 @@ Entering Accounts with ${Account_Name} ${Account_status} ${Phone} ${Type} ${Indu
 
 *** Keywords ***
 Entering Accounts
-    [Arguments]    ${Account_Name}    ${Account_status}    ${Phone}    ${Type}    ${Industry}
+    [Arguments]    ${Account_Name}    ${Account_Status}    ${Phone}    ${Type}    ${Industry}
     [Documentation]        Enters 10 new accounts using a .csv file
     Appstate               Home
     LaunchApp              Sales

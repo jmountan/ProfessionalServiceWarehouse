@@ -16,6 +16,7 @@ Entering Accounts
     [Documentation]        Enters 10 new accounts using a .csv file
     Appstate               Home
     LaunchApp              Sales
+    Sleep                  1
     ClickText              Accounts
     ClickText              New
     UseModal               On
@@ -37,6 +38,7 @@ Entering Accounts
 
 Delete accounts
     LaunchApp              Sales
+    Sleep                  1
     ClickText              Accounts
     ClickText              ExampleName
     ClickText              Show more actions

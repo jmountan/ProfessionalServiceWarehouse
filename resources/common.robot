@@ -4,6 +4,7 @@ Library                   QForce
 Library                   String
 
 
+
 *** Variables ***
 ${username}               jwm@Revolentgroup.com
 ${login_url}              https://login.salesforce.com           # Salesforce instance. NOTE: Should be overwritten in CRT variables
@@ -12,9 +13,9 @@ ${home_url}               ${login_url}/lightning/page/home
 
 *** Keywords ***
 Setup Browser
-    Open Browser          about:blank                 ${BROWSER}
-    SetConfig             LineBreak                   ${EMPTY}               #\ue000
-    SetConfig             DefaultTimeout              20s                    #sometimes salesforce is slow
+    Open Browser                    about:blank                 ${BROWSER}
+    SetConfig                       LineBreak                   ${EMPTY}               #\ue000
+    SetConfig                       DefaultTimeout              20s                    #sometimes salesforce is slow
 
 
 End suite
@@ -23,6 +24,7 @@ End suite
 
 Login
     [Documentation]       Login to Salesforce instance
+    Set Library Search Order        QForce
     GoTo                  ${login_url}
     TypeText              Username                    ${username}             delay=1
     TypeText              Password                    ${password}
@@ -38,6 +40,7 @@ Login
 
 Home
     [Documentation]       Navigate to homepage, login if needed
+    Set Library Search Order        QForce
     GoTo                  ${home_url}
     ${login_status} =     IsText                      To access this page, you have to log in to Salesforce.    2
     Run Keyword If        ${login_status}             Login
@@ -61,6 +64,7 @@ NoData
 
 
 DeleteAccounts
+    Set Library Search Order        QForce
     [Documentation]       RunBlock to remove all data until it doesn't exist anymore
     ClickText             ${data}
     ClickText             Delete
@@ -72,6 +76,7 @@ DeleteAccounts
 
 
 DeleteLeads
+    Set Library Search Order        QForce
     [Documentation]       RunBlock to remove all data until it doesn't exist anymore
     ClickText             ${data}
     ClickText             Delete

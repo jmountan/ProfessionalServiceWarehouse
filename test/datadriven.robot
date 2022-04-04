@@ -1,6 +1,6 @@
 *** Settings ***
 Resource                      ../resources/common.robot
-Library                       DataDriver    reader_class=TestDataApi       name="Accounts_Testing_CSV_-_Sheet1.csv"
+Library                       DataDriver    reader_class=TestDataApi       name="NewAccounts.csv"
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
 Test Template                 Entering Accounts
